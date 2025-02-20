@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #000;
+    position: relative;
+}
+
+#mouse-trail-container {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.mouse-trail {
+    position: absolute;
+    height: 2px; /* Thickness of the line */
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 3s ease-out;
+}
+
+.fade-out {
+    animation: fadeTrail 3s forwards;
+}
+
+@keyframes fadeTrail {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
