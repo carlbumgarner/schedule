@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Line Trail Effect</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Input</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="mouse-trail-container"></div>
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>Schedule Input</h1>
+    <form id="scheduleForm">
+      <label for="task">Task:</label>
+      <input type="text" id="task" required>
+
+      <label for="time">Time (HH:MM):</label>
+      <input type="time" id="time" required>
+
+      <button type="submit">Add Task</button>
+    </form>
+    <br>
+    <a href="schedule.html" id="viewScheduleLink">Go to Schedule</a>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
