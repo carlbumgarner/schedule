@@ -1,35 +1,79 @@
+/* Basic reset and styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    margin: 0;
-    overflow: hidden;
-    height: 100vh;
-    background-color: #000;
-    position: relative;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
 }
 
-#mouse-trail-container {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    left: 0;
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.mouse-trail {
-    position: absolute;
-    height: 2px; /* Thickness of the line */
-    pointer-events: none;
-    opacity: 1;
-    transition: opacity 3s ease-out;
+h1 {
+  text-align: center;
 }
 
-.fade-out {
-    animation: fadeTrail 3s forwards;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-@keyframes fadeTrail {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+input[type="text"], input[type="time"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+#scheduleList {
+  margin-top: 20px;
+}
+
+.schedule-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#currentTimeLine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  display: none;
+}
+
+a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
