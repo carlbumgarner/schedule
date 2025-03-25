@@ -1,27 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule Input</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Snake Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Schedule Input</h1>
-    <form id="scheduleForm">
-      <label for="task">Task:</label>
-      <input type="text" id="task" required>
-
-      <label for="time">Time (HH:MM):</label>
-      <input type="time" id="time" required>
-
-      <button type="submit">Add Task</button>
-    </form>
-    <br>
-    <a href="schedule.html" id="viewScheduleLink">Go to Schedule</a>
-  </div>
-
-  <script src="script.js"></script>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="game-over" style="display: none;">
+            <h2>You Won! Press Reset to Play Again.</h2>
+            <button id="resetButton">Reset</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
